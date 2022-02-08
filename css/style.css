@@ -1,0 +1,202 @@
+body{
+    margin: 0;
+    width: 100%;
+    background: top/100% url(../assets/images/vegetaleswp2.webp);
+    background-attachment: scroll;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 7fr 1fr;
+    grid-template-areas: 
+    "header"
+    "nav"
+    "frutero"
+    "footer";
+}
+
+.search {
+    width: 40%;
+    border: 2px solid green;
+    margin: 30px auto 40px auto;
+    padding: 30px;
+    background-color:rgba(41, 206, 41, 0.5);
+    border-radius:8px;
+}
+.frutero{
+    width: 80%;
+    margin: 0 auto;
+    border: 2px solid green;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    border-radius:8px;
+    margin-bottom: 40px;
+}
+.fruta{
+    width: 20%;
+    border: 3px solid rgb(144, 182, 144);
+    background-color: rgb(219, 224, 219);
+    border-radius:8px;
+    /* height: 330px; */
+    margin: 20px;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 1300px){
+    body{
+        grid-template-rows: 1fr 2fr 13fr 1fr;
+    }
+    .fruta{
+        width: 25%;
+    }
+}
+@media screen and (max-width: 980px){
+    body{
+        grid-template-rows: 1fr 2fr 17fr 1fr;
+    }
+    .fruta{
+        width: 38%;
+    }
+}
+/* @media screen and (max-width: 780px){
+    body{
+        grid-template-rows: 1fr 2fr 18fr 1fr;
+    }
+    .fruta{
+        width: 42%;
+    }
+} */
+@media screen and (max-width: 620px){
+    body{
+        grid-template-rows: 1fr 2fr 32fr 1fr;
+    }
+    .fruta{
+        width: 65%;
+    }
+}
+.fruta__title{
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+.fruta__contimg{
+    width: 90%;
+    border: 4px solid rgb(250, 217, 68);
+    border-radius:8px;
+}
+.fruta__img{
+    height: 100%;
+    width: 100%;
+}
+.fruta p{
+    margin: 3px;
+}
+.fruta__boton{
+    width: 100px;
+    background-color: green;
+    color: white;
+    border-radius: 4px;
+    margin-bottom: 6px;
+}
+.fruta__nutricion{
+    background-color:rgb(255, 255, 255);
+    border: 1px solid green;
+    border-radius: 4px;
+    color: rgb(0, 134, 0);
+    width: 85%;
+    height: 75px;
+    margin-top: 6px;
+    margin-bottom: 6px;
+}
+
+.recetero{
+    width: 1200px;
+    height: 600px;
+    border: 2px solid green;
+    /* margin: 30px auto 40px auto; */
+    padding: 30px;
+    background-color:rgba(41, 206, 41, 0.7);
+    border-radius:8px;
+    z-index: 100;
+    /* TRUCO para centrar div posicionado con ABSOLUTE */
+    position: absolute;
+    left: 50%;
+    margin-left:-610px;
+    top: 180px;
+    display: none;
+}
+.receteromostrar{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.receteroocultar{
+    display:none;
+}
+.equis{
+    height:40px;
+    width:40px;
+    /* position: relative;
+    left: 600px;
+    display: none; */
+}
+/* .equismostrar{
+    display: block;
+} */
+.equis img{
+    height: 100%;
+    width: 100%;
+}
+.receta{
+    width: 30%;
+    background-color: rgb(250, 217, 68);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.receta__list{
+    text-align: left;
+}
+.receta__contimg{
+    width: 90%;
+    border: 4px solid green;
+    border-radius:8px;
+    display: inline-block;
+}
+.receta__img{
+    height: 100%;
+    width: 100%;
+}
+
+.footer {
+    background-color:green;
+    padding: 20px;
+    text-align: center;
+    grid-area: header;
+    color: white;
+    grid-area: footer;
+
+
+}
+.header {
+    background-color:green;
+    padding: 20px;
+    text-align: center;
+    color: white;
+    grid-area: header;
+
+}
+.header__title{
+    margin: 0;
+}
+.nav {
+    grid-area: nav;
+}
+.frutero {
+    grid-area: frutero;
+}
+.recetero {
+    grid-area: recetero;
+}
